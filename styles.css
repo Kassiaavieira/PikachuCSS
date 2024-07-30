@@ -1,0 +1,196 @@
+/* Definições de variáveis de cor */
+:root {
+  --fundo: #f9e620; /* Cor de fundo do corpo */
+  --branco: #ffffff; /* Cor branca */
+  --preto: #000; /* Cor preta */
+  --bochecha: #ff6699; /* Cor das bochechas */
+  --lingua: #ff6699; /* Cor da língua */
+  --boca: #7d2727; /* Cor da boca */
+}
+
+/* Estilos para o corpo da página */
+body {
+  margin: 0 auto; /* Remove margens padrão e centraliza o corpo */
+  background-color: var(--fundo); /* Define a cor de fundo */
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilos para o contêiner do Pikachu */
+.pikachu {
+  position: relative; /* Permite o posicionamento absoluto dos filhos */
+  top: 30vh; /* Posiciona o Pikachu a 30% da altura da viewport */
+  display: flex; /* Utiliza flexbox para layout interno */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilos para os olhos do Pikachu */
+.olho {
+  position: absolute; /* Permite o posicionamento específico dos olhos */
+  width: 100px; /* Largura dos olhos */
+  height: 100px; /* Altura dos olhos */
+  border-radius: 50%; /* Torna os olhos circulares */
+  background-color: var(--preto); /* Cor dos olhos */
+}
+
+.olho::after {
+  content: ""; /* Cria um pseudo-elemento para o brilho do olho */
+  position: absolute;
+  width: 40px; /* Largura do brilho */
+  height: 40px; /* Altura do brilho */
+  border-radius: 50%; /* Torna o brilho circular */
+  left: 20px; /* Posições relativas ao olho */
+  top: 3px;
+  background-color: var(--branco); /* Cor do brilho */
+}
+
+.olho::before {
+  content: ""; /* Cria um pseudo-elemento para o brilho do olho */
+  position: absolute;
+  width: 10px; /* Largura do pequeno brilho */
+  height: 10px; /* Altura do pequeno brilho */
+  border-radius: 50%; /* Torna o pequeno brilho circular */
+  background-color: var(--branco); /* Cor do pequeno brilho */
+  left: 20px; /* Posições relativas ao olho */
+  top: 44px;
+}
+
+/* Estilos para o olho esquerdo */
+.olho-esquerdo {
+  left: -180px; /* Posiciona o olho esquerdo à esquerda */
+}
+
+/* Estilos para o olho direito */
+.olho-direito {
+  left: 180px; /* Posiciona o olho direito à direita */
+}
+
+/* Estilos para o nariz do Pikachu */
+.nariz {
+  position: absolute; /* Permite o posicionamento específico do nariz */
+  width: 35px; /* Largura do nariz */
+  height: 12px; /* Altura do nariz */
+  border-radius: 50%; /* Torna o nariz circular */
+  background-color: var(--preto); /* Cor do nariz */
+  top: 100px; /* Posição vertical do nariz */
+  left: 27px; /* Posição horizontal do nariz */
+}
+
+/* Estilos para as bochechas do Pikachu */
+.bochecha {
+  position: absolute; /* Permite o posicionamento específico das bochechas */
+  width: 110px; /* Largura das bochechas */
+  height: 110px; /* Altura das bochechas */
+  border-radius: 50%; /* Torna as bochechas circulares */
+  background-color: var(--bochecha); /* Cor das bochechas */
+  border-color: var(--preto); /* Cor da borda das bochechas */
+  top: 135px; /* Posição vertical das bochechas */
+}
+
+.bochecha-esquerda {
+  left: -240px; /* Posiciona a bochecha esquerda à esquerda */
+}
+
+.bochecha-direita {
+  left: 220px; /* Posiciona a bochecha direita à direita */
+}
+
+/* Estilos para a boca do Pikachu */
+.boca {
+  position: absolute; /* Permite o posicionamento específico da boca */
+  width: 120px; /* Largura da boca */
+  height: 140px; /* Altura da boca */
+  border: 3px solid; /* Borda da boca */
+  border-color: transparent transparent var(--preto) transparent; /* Cor da borda inferior */
+  border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Forma arredondada da boca */
+  top: 146px; /* Posição vertical da boca */
+  left: -16px; /* Posição horizontal da boca */
+  background-color: var(--boca); /* Cor de fundo da boca */
+}
+
+.boca::before {
+  content: ""; /* Cria um pseudo-elemento para a parte superior da boca */
+  position: absolute;
+  width: 91px; /* Largura da parte superior da boca */
+  height: 15px; /* Altura da parte superior da boca */
+  border: 3px solid; /* Borda da parte superior da boca */
+  border-color: transparent transparent var(--preto) transparent; /* Cor da borda inferior */
+  border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Forma arredondada da parte superior da boca */
+  top: -17px; /* Posição vertical da parte superior da boca */
+  left: -27px; /* Posição horizontal da parte superior da boca */
+  transform: rotate(-6deg); /* Rotaciona a parte superior da boca */
+  background-color: var(--fundo); /* Cor de fundo da parte superior da boca */
+  z-index: 1; /* Define a ordem de empilhamento */
+}
+
+.boca::after {
+  content: ""; /* Cria um pseudo-elemento para a parte superior da boca */
+  position: absolute;
+  width: 91px; /* Largura da parte superior da boca */
+  height: 15px; /* Altura da parte superior da boca */
+  border: 3px solid; /* Borda da parte superior da boca */
+  border-color: transparent transparent var(--preto) transparent; /* Cor da borda inferior */
+  border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Forma arredondada da parte superior da boca */
+  top: -17px; /* Posição vertical da parte superior da boca */
+  left: 48px; /* Posição horizontal da parte superior da boca */
+  transform: rotate(6deg); /* Rotaciona a parte superior da boca */
+  background-color: var(--fundo); /* Cor de fundo da parte superior da boca */
+  z-index: 1; /* Define a ordem de empilhamento */
+}
+
+/* Estilos para a língua do Pikachu */
+.lingua {
+  position: absolute; /* Permite o posicionamento específico da língua */
+  width: 88px; /* Largura da língua */
+  height: 90px; /* Altura da língua */
+  background-color: var(--lingua); /* Cor da língua */
+  border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Forma arredondada da língua */
+  top: 199px; /* Posição vertical da língua */
+  left: 3px; /* Posição horizontal da língua */
+}
+
+.lingua::before {
+  content: ""; /* Cria um pseudo-elemento para uma parte da língua */
+  position: absolute;
+  width: 64px; /* Largura da parte da língua */
+  height: 88px; /* Altura da parte da língua */
+  background-color: var(--lingua); /* Cor da parte da língua */
+  border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Forma arredondada da parte da língua */
+  top: -1px; /* Posição vertical da parte da língua */
+  left: -3px; /* Posição horizontal da parte da língua */
+  transform: rotate(-11deg); /* Rotaciona a parte da língua */
+}
+
+.lingua::after {
+  content: ""; /* Cria um pseudo-elemento para uma parte da língua */
+  position: absolute;
+  width: 64px; /* Largura da parte da língua */
+  height: 88px; /* Altura da parte da língua */
+  background-color: var(--lingua); /* Cor da parte da língua */
+  border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Forma arredondada da parte da língua */
+  top: -1px; /* Posição vertical da parte da língua */
+  left: 27px; /* Posição horizontal da parte da língua */
+  transform: rotate(10.5deg); /* Rotaciona a parte da língua */
+}
+
+/* Estilos para a segunda parte da língua do Pikachu */
+.lingua-parte-dois {
+  position: absolute; /* Permite o posicionamento específico da segunda parte da língua */
+  width: 109px; /* Largura da segunda parte da língua */
+  height: 31px; /* Altura da segunda parte da língua */
+  background-color: var(--lingua); /* Cor da segunda parte da língua */
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0; /* Forma arredondada da segunda parte da língua */
+  top: 174px; /* Posição vertical da segunda parte da língua */
+  left: -7.5px; /* Posição horizontal da segunda parte da língua */
+}
+
+/* Estilos para a parte escondida da boca do Pikachu */
+.parte-escondida-da-boca {
+  position: absolute; /* Permite o posicionamento específico da parte escondida da boca */
+  width: 22px; /* Largura da parte escondida da boca */
+  height: 19px; /* Altura da parte escondida da boca */
+  background-color: var(--boca); /* Cor da parte escondida da boca */
+  top: 137px; /* Posição vertical da parte escondida da boca */
+  left: 35px; /* Posição horizontal da parte escondida da boca */
+  transform: rotate(51deg); /* Rotaciona a parte escondida da boca */
+}
